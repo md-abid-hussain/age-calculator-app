@@ -57,7 +57,7 @@ const App = () => {
 
   return (
     <main className="min-h-screen flex items-center justify-center px-4 sm:px-16 bg-offWhite">
-      <div className="w-[345px] py-12 bg-white rounded-t-3xl px-6 rounded-bl-3xl rounded-br-[95px] lg:px-[52px] lg:py-14 lg:min-w-[840px]">
+      <div className="w-[345px] py-12 bg-white rounded-t-3xl px-6 rounded-bl-3xl rounded-br-[95px] lg:px-[52px] lg:py-14 lg:min-w-[840px] lg:rounded-br-[190px] shadow-md">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex gap-3 lg:gap-8">
             <CustomInput
@@ -66,6 +66,7 @@ const App = () => {
               name="day"
               register={register}
               errors={errors}
+              placeholder="DD"
             />
             <CustomInput
               labelName="MONTH"
@@ -73,6 +74,7 @@ const App = () => {
               name="month"
               register={register}
               errors={errors}
+              placeholder="MM"
             />
             <CustomInput
               labelName="YEAR"
@@ -80,9 +82,10 @@ const App = () => {
               name="year"
               register={register}
               errors={errors}
+              placeholder="YYYY"
             />
           </div>
-          <div className="mb-8 flex before:content-[''] before:h-[2px] before:translate-y-8 before:bg-offWhite before:flex-1 after:content-[''] after:h-[2px] after:bg-offWhite after:flex-1 after:translate-y-8 lg:after:hidden lg:before:translate-y-12">
+          <div className="mb-8 flex before:content-[''] before:h-[2px] before:translate-y-8 before:bg-offWhite before:flex-1 after:content-[''] after:h-[2px] after:bg-offWhite after:flex-1 after:translate-y-8 lg:after:hidden lg:before:translate-y-12 lg:mb-3">
             <button
               type="submit"
               className="bg-customPurple mx-auto w-16 h-16 grid place-content-center rounded-full p-4 hover:bg-offBlack lg:w-24 lg:h-24"
@@ -92,15 +95,15 @@ const App = () => {
           </div>
         </form>
         <div>
-          <p className=" text-5xl font-customPoppins font-black italic lg:text-[92px]">
+          <p className=" text-5xl font-customPoppins font-black italic lg:text-[108px]">
             <span className="text-customPurple">{totalYear || "--"} </span>
             <span className="tracking-tighter">years</span>
           </p>
-          <p className=" text-5xl font-customPoppins font-black italic lg:text-[92px]">
+          <p className=" text-5xl font-customPoppins font-black italic lg:text-[108px]">
             <span className="text-customPurple">{totalMonth || "--"} </span>
             <span className="tracking-tighter">months</span>
           </p>
-          <p className=" text-5xl font-customPoppins font-black italic lg:text-[92px]">
+          <p className=" text-5xl font-customPoppins font-black italic lg:text-[108px]">
             <span className="text-customPurple">{totalDay || "--"} </span>
             <span className="tracking-tighter">days</span>
           </p>
