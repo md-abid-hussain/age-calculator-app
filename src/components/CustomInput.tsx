@@ -26,7 +26,7 @@ const CustomInput = ({
     : "focus:border-customPurple border-offWhite";
   inputClass =
     inputClass +
-    " w-[86px] border-2 rounded-md py-4 px-3.5 text-sm focus:outline-none focus:ring-[0.5px] text-lg font-black lg:w-[160px] lg:p-[22px] text-[28px]";
+    " w-[86px] border-2 rounded-md py-4 px-3.5 text-sm focus:outline-none focus:ring-[0.5px] text-lg font-black lg:w-[160px] lg:p-[22px] lg:text-[28px]";
   return (
     <div className="flex flex-col gap-2 relative mb-8 lg:mb-0">
       <label htmlFor={id} className={labelClass}>
